@@ -1,0 +1,7 @@
+{
+  "namespace": "crafting_pocket",
+
+  "full_screen_icon@crafting.icon_image": {
+    "texture": "textures/ui/icon_preview"
+  }
+}

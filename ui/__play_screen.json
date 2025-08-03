@@ -1,0 +1,35 @@
+{
+  "namespace": "play",
+
+  "sign_in_realms_image": {
+    "type": "panel",
+    "size": [ "100%cm", "100%cm" ],
+    "controls": [
+      {
+        "chevron@play.realms_chevron": {
+          "layer": 1,
+          "offset": "$chevron_offset"
+        }
+      },
+      {
+        "portal@play.realms_icon": {
+          "layer": 2,
+          "offset": "$portal_offset"
+        }
+      }
+    ],
+    // this is to counteract the image moving down when the button is pressed
+    "variables": [
+      {
+        "requires": "$pressed_state",
+        "$chevron_offset": [ -3, 0.5 ],
+        "$portal_offset": [ -6, 0 ]
+      },
+      {
+        "requires": "(not $pressed_state)",
+        "$chevron_offset": [ -3, 0.5 ],
+        "$portal_offset": [ -6, 0 ]
+      }
+    ]
+  }
+}

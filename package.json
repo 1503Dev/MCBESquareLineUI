@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "jsonminify": "^0.4.2"
+  }
+}

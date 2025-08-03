@@ -1,0 +1,131 @@
+{
+  "namespace": "anims",
+
+  //聊天消息
+
+  "chat_alpha_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@anims.chat_alpha"
+  },
+  "chat_alpha": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "duration": 1,
+    "from": 1,
+    "to": 0
+  },
+
+  "chat_in": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 0.3,
+    "from": [ "-100%", 0 ],
+    "to": [ 20, 0 ],
+    "next": "@anims.chat_in_1"
+  },
+  "chat_in_1": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 0.5,
+    "from": [ 20, 0 ],
+    "to": [ 0, 0 ],
+    "next": "@anims.chat_wait"
+  },
+  "chat_wait": {
+    "anim_type": "wait",
+    "duration": "$chat_item_lifetime",
+    "next": "@anims.chat_out"
+  },
+  "chat_out": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 0.3,
+    "from": [ 0, 0 ],
+    "to": [ 0, -10 ]
+  },
+
+//页面
+
+  "entrance_push": {
+    "anim_type": "offset",
+    "easing": "out_expo",
+    "duration": 1,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "exit_push@entrance_push": {
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "header_entrance_push@settings_up_entrance_push": {
+    "to": [ 0, 0 ]
+  },
+  "header_entrance_pop@header_entrance_push": {
+    "play_event": "screen.entrance_pop"
+  },
+  "header_exit_push@settings_up_exit_push": {
+    "duration": "$transition_time_push",
+    "to": [ 0, "-100%" ]
+  },
+  "header_exit_pop@header_exit_push": {
+    "duration": "$transition_time_pop",
+    "play_event": "screen.exit_pop"
+  },
+
+//设置
+
+  "settings_up_entrance_push@entrance_push": {
+    "duration": 0.5,
+    "from": [ 0, "-100%" ],
+    "to": [ 0, 3.5 ]
+  },
+  "settings_up_entrance_pop@settings_up_entrance_push": {
+    "play_event": "screen.entrance_pop"
+  },
+  "settings_up_exit_push@exit_push": {
+    "duration": "$transition_time_push",
+    "to": [ 0, "-100%" ],
+    "from": [ 0, 3.5 ]
+  },
+  "settings_up_exit_pop@settings_up_exit_push": {
+    "duration": "$transition_time_pop",
+    "play_event": "screen.exit_pop"
+  },
+
+  "settings_left_entrance_push@entrance_push": {
+    "duration": 0.7,
+    "from": [ "-50%", "21px" ],
+    "to": [ 2, "21px" ]
+  },
+  "settings_left_entrance_pop@settings_left_entrance_push": {
+    "play_event": "screen.entrance_pop"
+  },
+  "settings_left_exit_push@exit_push": {
+    "duration": "$transition_time_push",
+    "to": [ "-50%", "21px" ],
+    "from": [ 2, "21px" ]
+  },
+  "settings_left_exit_pop@settings_left_exit_push": {
+    "duration": "$transition_time_pop",
+    "play_event": "screen.exit_pop"
+  },
+
+  "settings_right_entrance_push@entrance_push": {
+    "from": [ "-1px", "75%" ],
+    "to": [ "-1px", "21px" ]
+  },
+  "settings_right_entrance_pop@settings_right_entrance_push": {
+    "play_event": "screen.entrance_pop"
+  },
+  "settings_right_exit_push@exit_push": {
+    "duration": "$transition_time_push",
+    "to": [ "-1px", "75%" ],
+    "from": [ "-1px", "21px" ]
+  },
+  "settings_right_exit_pop@settings_right_exit_push": {
+    "duration": "$transition_time_pop",
+    "play_event": "screen.exit_pop"
+  }
+}

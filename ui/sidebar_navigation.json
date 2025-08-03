@@ -1,0 +1,58 @@
+{
+  "namespace": "sidebar_navigation",
+
+  "sidebar_bg": {
+    "type": "image",
+    "texture": "textures/ui/background_panel",
+    "fill": true,
+    "keep_ratio": false
+  },
+
+  "verbose_button@common_buttons.dark_content_button": {
+    "size": [ "100% - 14px", "100% - 2px" ],
+    "$button_focus_precedence": -1,
+    "$pressed_button_name": "button.select_nav_option",
+    "$button_content": "sidebar_navigation.verbose_button_content",
+    "$button_text_binding_name": "#sidebar_option_label",
+    "$default_button_texture": "textures/ui/sidebar_icons/button_panel_default",
+    "$hover_button_texture": "textures/ui/sidebar_icons/button_panel_hover",
+    "$pressed_button_texture": "textures/ui/sidebar_icons/button_panel_pressed",
+
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$sidebar_factory_collection_name"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$sidebar_section_collection_name",
+        "binding_collection_prefix": "$sidebar_section_collection_prefix"
+      }
+    ]
+  },
+  "verbose_screen_nav_button@common_buttons.dark_content_button": {
+    "size": [ "100% - 14px", "100% - 2px" ],
+    "$pressed_button_name": "button.select_screen_nav_button_option",
+    "$button_content": "sidebar_navigation.verbose_button_content",
+    "$button_text_binding_name": "#sidebar_screen_nav_screen_button_label",
+    "$default_button_texture": "textures/ui/sidebar_icons/button_panel_default",
+    "$hover_button_texture": "textures/ui/sidebar_icons/button_panel_hover",
+    "$pressed_button_texture": "textures/ui/sidebar_icons/button_panel_pressed",
+
+    "bindings": [
+      {
+        "binding_name": "#is_screen_nav_button_visible",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$sidebar_factory_collection_name"
+      },
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$sidebar_section_collection_name",
+        "binding_collection_prefix": "$sidebar_section_collection_prefix"
+      }
+    ]
+  }
+}

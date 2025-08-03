@@ -1,0 +1,22 @@
+{
+   "format_version" : 2,
+   "header" : {
+      "description" : "Made by TheChuan1503 & Inkranty\nv1.0.0 for 1.20.8\n部分数据文件和纹理来自 Black Modern UI",
+      "name" : "Square Line UI",
+      "uuid" : "b7c2409a-a1b8-4f81-a0cb-5e8e0aa8cfb9",
+      "version" : [1, 0, 0],
+      "min_engine_version": [1, 13, 0] 
+   },
+   "metadata" : {
+      "authors" : [ "TheChuan1503", "Inkranty" ],
+      "url" : "https://1503dev.top"
+   },  
+   "modules" : [
+      {
+         "description" : "Square Line UI",
+         "type" : "resources",
+         "uuid" : "e131dc33-54d4-483c-8394-06bf76b7f6cd",
+         "version" : [1, 1, 0]
+      }
+   ]
+}
